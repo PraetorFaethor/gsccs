@@ -1588,10 +1588,10 @@ boolean c2t_hccs_preNoncombat() {
 	c2t_hccs_getEffect($effect[smooth movements]);
 
 	//Bird-a-day
-	if (my_class() == $class[pastamancer]) {
-		use(1, $item[Bird-a-Day calendar]);
-		use_skill(1, $skill[7323]);
-	}
+	//if (my_class() == $class[pastamancer]) {
+	//	use(1, $item[Bird-a-Day calendar]);
+	//	use_skill(1, $skill[7323]);
+	//}
 
 	if (available_amount($item[powerful glove]) > 0 && have_effect($effect[invisible avatar]) == 0 && !c2t_cast($skill[cheat code: invisible avatar]))
 		abort('Invisible avatar failed');
@@ -1733,6 +1733,7 @@ boolean c2t_hccs_preWeapon() {
 	c2t_hccs_getEffect($effect[frenzied, bloody]);
 	c2t_hccs_getEffect($effect[scowl of the auk]);
 	c2t_hccs_getEffect($effect[tenacity of the snapper]);
+	c2t_hccs_getEffect($effect[billiards belligerence]);
 
 	//don't have these skills yet. maybe should add check for all skill uses to make universal?
 	if (have_skill($skill[song of the north]))
@@ -1807,12 +1808,12 @@ boolean c2t_hccs_preWeapon() {
 	c2t_hccs_getEffect($effect[engorged weapon]);
 
 	//Cast Seek Bird from Bird-A-Day. Assumes a weapon damage favorite bird.
-	if (have_skill($skill[Visit your Favorite Bird])) {
+	//if (have_skill($skill[Visit your Favorite Bird])) {
 		// use_skill(1, $skill[Visit your Favorite Bird]); //save for later
-		if (my_class() == $class[pastamancer]) {
-			use_skill(1, $skill[7323]); //PM has good daily bird
-		}
-	}
+		//if (my_class() == $class[pastamancer]) {
+	//		use_skill(1, $skill[7323]); //PM has good daily bird
+	//	}
+	//}
 
 	//tainted seal's blood
 	if (available_amount($item[tainted seal's blood]) > 0)
@@ -2206,10 +2207,10 @@ boolean c2t_hccs_preMox() {
 			c2t_hccs_haveUse($skill[Bind Penne Dreadful]);
 		}
 	}
-	if (my_class() == $class[seal clubber]) {
-		use(1, $item[Bird-a-Day calendar]);
-		use_skill(1, $skill[7323]);
-	}
+	//if (my_class() == $class[seal clubber]) {
+	//	use(1, $item[Bird-a-Day calendar]);
+	//	use_skill(1, $skill[7323]);
+	//}
 	c2t_hccs_getEffect($effect[Disco Fever]);
 	if (c2t_hccs_thresholdMet(TEST_MOX))
 		return true;
